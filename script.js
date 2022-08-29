@@ -1,3 +1,14 @@
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("sw.js")
+    .then((registration) => {
+      console.log(registration);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
 let currentTime = 0;
 let timer = null;
 let timerState = true;
